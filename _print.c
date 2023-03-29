@@ -1,14 +1,15 @@
 #include "main.h"
+#include <stdint.h>
 #include <stdlib.h>
 /**
  * printint - hi
  * @x : hi
  * Return: hi
  */
-int printint(int x)
+int pint(int x)
 {
 	char *s;
-	int y = x, ln = 0;
+	int y = x, ln = 0, m = 0;
 
 	while (y)
 	{
@@ -24,5 +25,7 @@ int printint(int x)
 		ln--;
 		x /= 10;
 	}
-	return printstr(s);
+	m = printstr(s);
+	free(s);
+	return m;
 }

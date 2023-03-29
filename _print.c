@@ -11,7 +11,7 @@ int pint(int x)
 {
 	char *s;
 	int y = x, ln = 0, m = 0, j = 0;
-	long long z;
+	int z;
 
 	if (x < 0)
 	{

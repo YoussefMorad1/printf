@@ -3,4 +3,5 @@
 int _printf(const char *format, ...);
 int is_good(char s);
 int printstr(char *s);
+int printint(int x)
 #endif

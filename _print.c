@@ -19,7 +19,7 @@ int pint(int x)
 
 		write(1, &c, 1);
 		j = 1;
-		z = -1 * (long long)x;
+		z = (long long)x;
 	}
 	else
 		z = x;
@@ -40,7 +40,7 @@ int pint(int x)
 	ln--;
 	while (z)
 	{
-		s[ln] = '0' + (z % 10);
+		s[ln] = '0' + (z % 10) * (z < 0? -1: 1);
 		ln--;
 		z /= 10;
 	}

@@ -16,7 +16,7 @@ int pint(int x)
 	{
 		char c = '-';
 		write(1, &c, 1);
-		pint(- x);
+		return (pint(- x) + 1);
 	}
 	while (y)
 	{
@@ -34,5 +34,5 @@ int pint(int x)
 	}
 	m = printstr(s);
 	free(s);
-	return m;
+	return (m);
 }

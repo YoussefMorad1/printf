@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[i] == '%' !fromat[i + 1]){
+			if (format[i] == '%' && !fromat[i + 1]){
 				i++;
 				continue;
 			}

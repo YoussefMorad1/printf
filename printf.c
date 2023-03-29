@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == 's')
 			{
-				printstr(va_arg(ls, char *));
+				ln += printstr(va_arg(ls, char *));
 			}
 			else if (format[i] == '%')
 			{

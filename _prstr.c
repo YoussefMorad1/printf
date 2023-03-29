@@ -5,7 +5,7 @@
  * @s: hi
  * Return: hi
  */
-void printstr(char *s)
+int printstr(char *s)
 {
 	int i = 0;
 
@@ -14,4 +14,5 @@ void printstr(char *s)
 		write(1, &s[i], 1);
 		i++;
 	}
+	return i;
 }

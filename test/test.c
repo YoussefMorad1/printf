@@ -13,8 +13,10 @@ int main(void)
 	int len2;
 	unsigned int ui;
 	void *addr;
-	printf("%\n");
-	_printf("%\n");
+	printf("hi%zqq");
+	//_printf("%");
+	//printf("%\n");
+	//_printf("%\n");
 	printf("%s\n", 0);
 	_printf("%s\n", 0);
 	printf("\n");

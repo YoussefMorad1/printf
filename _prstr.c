@@ -12,8 +12,7 @@ int printstr(char *s)
 
 	if (!s)
 	{
-		s = malloc(6);
-		s = "(null)";
+		s = "(null)\0";
 	}
 	while (s[i])
 	{

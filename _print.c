@@ -14,7 +14,8 @@ int pint(int x)
 
 	if (x < 0)
 	{
-		write(1, '-', 1);
+		char c = '-';
+		write(1, &c, 1);
 		pint(- x);
 	}
 	while (y)

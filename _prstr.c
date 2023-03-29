@@ -12,7 +12,7 @@ int printstr(char *s)
 
 	if (!s)
 	{
-		exit(1);
+		s = "(null)";
 	}
 	while (s[i])
 	{

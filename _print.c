@@ -34,9 +34,9 @@ int pint(int x)
 		ln++;
 	}
 	s = malloc(ln + 1);
-/*	if (!s)
+	if (!s)
 		exit(1);
-*/	s[ln] = '\0';
+	s[ln] = '\0';
 	ln--;
 	while (z)
 	{

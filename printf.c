@@ -3,21 +3,15 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-void printstr(char *s)
+int is_good(char c)
 {
-	int i = 0;
-
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
+	return c == 'd' || c == 's' || c == '%';
 }
 
 int _printf(const char *format, ...)
 {
 	va_list ls;
-	int i = 0, ln;
+	int i = 0, ln = 0;
 
 	va_start(ls, format);
 	while (format[i])

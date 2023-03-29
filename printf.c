@@ -3,11 +3,22 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * is_good - hi
+ * @c: hi
+ * Return: hi
+ */
 int is_good(char c)
 {
 	return c == 'd' || c == 's' || c == '%';
 }
 
+/**
+ * _printf - hi
+ * @format: hi
+ * @...: hi
+ * Return: hi
+ */
 int _printf(const char *format, ...)
 {
 	va_list ls;

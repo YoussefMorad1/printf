@@ -10,15 +10,19 @@
 int pint(int x)
 {
 	char *s;
-	int y = x, ln = 0, m = 0;
+	int y = x, ln = 0, m = 0, j = 0;
+	long long z;
 
 	if (x < 0)
 	{
 		char c = '-';
 
 		write(1, &c, 1);
-		return (pint(-x) + 1);
+		j = 1;
+		z = -1 * (long long)x;
 	}
+	else
+		z = x;
 	if (!x)
 	{
 		char c = '0';
@@ -34,13 +38,13 @@ int pint(int x)
 	s = malloc(ln + 1);
 	s[ln] = '\0';
 	ln--;
-	while (x)
+	while (z)
 	{
-		s[ln] = '0' + x % 10;
+		s[ln] = '0' + (z % 10);
 		ln--;
-		x /= 10;
+		z /= 10;
 	}
 	m = printstr(s);
 	free(s);
-	return (m);
+	return (m + j);
 }

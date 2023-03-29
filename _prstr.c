@@ -19,6 +19,5 @@ int printstr(char *s)
 		write(1, &s[i], 1);
 		i++;
 	}
-	free(s);
 	return (i);
 }

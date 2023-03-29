@@ -12,6 +12,7 @@ int printstr(char *s)
 
 	if (!s)
 	{
+		s = malloc(6);
 		s = "(null)";
 	}
 	while (s[i])
@@ -19,5 +20,6 @@ int printstr(char *s)
 		write(1, &s[i], 1);
 		i++;
 	}
+	free(s);
 	return (i);
 }

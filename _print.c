@@ -15,8 +15,16 @@ int pint(int x)
 	if (x < 0)
 	{
 		char c = '-';
+
 		write(1, &c, 1);
 		return (pint(- x) + 1);
+	}
+	if (!x)
+	{
+		char c = '0';
+
+		write(1, &c, 1);
+		return 1;
 	}
 	while (y)
 	{

@@ -60,9 +60,9 @@ int _printf(const char *format, ...)
 				ln++;
 			}
 			else if (format[i] == 's')
-			{
 				ln += printstr(va_arg(ls, char *));
-			}
+			else if (format[i] == 'd' || format[i] == 'i')
+				ln += printint(va_arg(ls, int));
 			else if (format[i] == '%')
 			{
 				write(1, &format[i], 1);

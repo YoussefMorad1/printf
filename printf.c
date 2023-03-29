@@ -10,7 +10,7 @@
  */
 int is_good(char c)
 {
-	return c == 'd' || c == 's' || c == '%';
+	return c == 'c' || c == 's' || c == '%';
 }
 
 /**

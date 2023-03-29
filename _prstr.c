@@ -9,15 +9,17 @@
 int printstr(char *s)
 {
 	int i = 0;
+	char *p;
 
 	if (!s)
 	{
-		s = malloc(7);
-		s = "(null)\0";
+		p = "(null)\0";
 	}
-	while (s[i])
+	else
+		p = s;
+	while (p[i])
 	{
-		write(1, &s[i], 1);
+		write(1, &p[i], 1);
 		i++;
 	}
 	return (i);

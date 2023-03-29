@@ -12,6 +12,27 @@ int is_good(char c)
 	return (c == 'c' || c == 's' || c == '%');
 }
 
+/** 
+ * check - hi
+ * @format : hi
+ * Return: hi
+ */
+int check(char *format)
+{
+	int i = 0;
+
+	if (!format)
+		return (0);
+	while (format[i])
+	{
+		if (format[i] == '%' && !format[i + 1])
+			return (0);
+		else if (format[i] == '%')
+			i++;
+		i++;
+	}
+	return (1);
+}
 /**
  * _printf - hi
  * @format: hi
@@ -23,21 +44,9 @@ int _printf(const char *format, ...)
 	va_list ls;
 	int i = 0, ln = 0;
 
-	if (!format)
-	{
-		return (-1);
-		/*exit(1);*/
-	}
 	va_start(ls, format);
-	while (format[i])
-	{
-		if (format[i] == '%' && !format[i + 1])
+	if (!check(format)
 			return (-1);
-		else if (format[i] == '%')
-			i++;
-		i++;
-	}
-	i = 0;
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] && is_good(format[i + 1]))

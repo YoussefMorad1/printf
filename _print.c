@@ -19,10 +19,8 @@ int pint(int x)
 
 		write(1, &c, 1);
 		j = 1;
-		z = (long long)x;
 	}
-	else
-		z = x;
+	z = x;
 	if (!x)
 	{
 		char c = '0';

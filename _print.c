@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 /**
- * printint - hi
+ * pint - hi
  * @x : hi
  * Return: hi
  */
@@ -17,14 +17,14 @@ int pint(int x)
 		char c = '-';
 
 		write(1, &c, 1);
-		return (pint(- x) + 1);
+		return (pint(-x) + 1);
 	}
 	if (!x)
 	{
 		char c = '0';
 
 		write(1, &c, 1);
-		return 1;
+		return (1);
 	}
 	while (y)
 	{

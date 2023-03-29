@@ -17,7 +17,7 @@ int is_good(char c)
  * @format : hi
  * Return: hi
  */
-int check(char *format)
+int check(const char *format)
 {
 	int i = 0;
 
@@ -45,7 +45,7 @@ int _printf(const char *format, ...)
 	int i = 0, ln = 0;
 
 	va_start(ls, format);
-	if (!check(format)
+	if (!check(format))
 			return (-1);
 	while (format[i])
 	{

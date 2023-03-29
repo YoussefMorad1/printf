@@ -11,6 +11,11 @@ int pint(int x)
 	char *s;
 	int y = x, ln = 0, m = 0;
 
+	if (x < 0)
+	{
+		write(1, '-', 1);
+		pint(- x);
+	}
 	while (y)
 	{
 		y /= 10;

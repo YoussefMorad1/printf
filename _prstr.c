@@ -8,10 +8,11 @@
  */
 int printstr(char *s)
 {
-	int i = 0;
+	int i = 0, j = 0;
 
 	if (!s)
 	{
+		j = 1;
 		s = malloc(7);
 		s = "(null)\0";
 	}
@@ -20,6 +21,7 @@ int printstr(char *s)
 		write(1, &s[i], 1);
 		i++;
 	}
-	free(s);
+	if (j)
+		free(s);
 	return (i);
 }

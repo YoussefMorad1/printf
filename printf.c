@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
 /**
  * is_good - hi
  * @c: hi
@@ -26,7 +25,8 @@ int _printf(const char *format, ...)
 
 	if (!format)
 	{
-		exit(1);
+		return (-1);
+		/*exit(1);*/
 	}
 	va_start(ls, format);
 	while (format[i])

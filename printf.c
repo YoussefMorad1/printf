@@ -24,6 +24,10 @@ int _printf(const char *format, ...)
 	va_list ls;
 	int i = 0, ln = 0;
 
+	if (!format)
+	{
+		exit(1);
+	}
 	va_start(ls, format);
 	while (format[i])
 	{

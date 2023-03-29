@@ -29,8 +29,13 @@ int _printf(const char *format, ...)
 		/*exit(1);*/
 	}
 	va_start(ls, format);
-	if (format[0] == '%' && !format[1])
-		return (-1);
+	while (format[i])
+	{
+		if (format[i] == '%' && !format[i + 1])
+			return (-1);
+		i++;
+	}
+	i = 0;
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] && is_good(format[i + 1]))

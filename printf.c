@@ -12,7 +12,7 @@ int is_good(char c)
 	return (c == 'c' || c == 's' || c == '%');
 }
 
-/** 
+/**
  * check - hi
  * @format : hi
  * Return: hi
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 
 	va_start(ls, format);
 	if (!check(format))
-			return (-1);
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] && is_good(format[i + 1]))
